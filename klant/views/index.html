@@ -1,0 +1,125 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+
+
+?>
+<?php include 'navbar.php'; ?>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoe het werkt</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-green': '#8fe507',
+                        'custom-purple': '#5b4687',
+                        'custom-lavender': '#b297c7'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white font-sans">
+
+<section class="hero relative h-screen flex items-center justify-center overflow-hidden">
+    <!-- Video background met verbeterde kwaliteit -->
+    <div class="absolute inset-0 z-0">
+        <video
+                class="object-cover w-full h-full filter brightness-75"
+                src="../media/sign.mp4"
+                autoplay
+                loop
+                muted
+                playsinline></video>
+    </div>
+
+    <!-- Gradient overlay voor betere leesbaarheid -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70 z-10"></div>
+
+    <!-- Hero content met verbeterde typografie en spacing -->
+    <div class="container relative z-20 px-4 sm:px-6 mx-auto text-center max-w-4xl">
+        <div class="space-y-6">
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-[#8fe507] mb-4">
+                GLR Webshop
+            </h1>
+
+            <p class="text-lg md:text-xl leading-relaxed text-white/90 mb-8 max-w-2xl mx-auto">
+                Ons Productiehuis is dé plek waar jij als student je werk tot leven brengt!
+                Of het nu gaat om posters, stickers, t-shirts, 3D-prints, tasjes of complete magazines.
+                <span class="font-medium">Tastbaar is altijd leuker!</span>
+                Daarnaast leer je ook welk materiaal het beste past bij jouw ontwerp.
+            </p>
+
+            <div class="flex justify-center gap-4">
+                <a href="./product.view.php" class="bg-[#8fe507] hover:bg-[#a0ff08] text-gray-900 font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    Shop Nu
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Decoratieve elementen -->
+    <div class="absolute bottom-10 left-0 right-0 z-20 flex justify-center">
+        <a href="#producten" class="text-white/60 hover:text-white animate-bounce">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </a>
+    </div>
+</section>
+
+<div class="container mx-auto px-4 py-12">
+
+    <h1 class="text-4xl font-bold text-center mb-12 text-custom-purple">Hoe het werkt</h1>
+
+    <div class="grid md:grid-cols-4 gap-8">
+        <!-- Stap 1: Categorie -->
+        <div class="text-center">
+            <div class="mx-auto w-16 h-16 bg-custom-green text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                01
+            </div>
+            <h2 class="text-xl font-semibold mb-2 text-custom-purple">Categorie</h2>
+            <p class="text-gray-600 mb-4">Kies de categorie waarin je geïnteresseerd bent.</p>
+            
+        </div>
+
+
+        <!-- Stap 2: Upload bestand -->
+        <div class="text-center">
+            <div class="mx-auto w-16 h-16 bg-custom-lavender text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                02
+            </div>
+            <h2 class="text-xl font-semibold mb-2 text-custom-purple">Upload bestand</h2>
+            <p class="text-gray-600">Upload je ontwerpen en laat ons het maken</p>
+        </div>
+
+        <!-- Stap 3: Bestellen -->
+        <div class="text-center">
+            <div class="mx-auto w-16 h-16 bg-custom-green text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                03
+            </div>
+            <h2 class="text-xl font-semibold mb-2 text-custom-purple">Afreken</h2>
+            <p class="text-gray-600">Email van school invullen</p>
+        </div>
+
+        <!-- Stap 4: Ophalen -->
+        <div class="text-center">
+            <div class="mx-auto w-16 h-16 bg-custom-lavender text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                04
+            </div>
+            <h2 class="text-xl font-semibold mb-2 text-custom-purple">Ophalen</h2>
+            <p class="text-gray-600">Ophalen kan bij de Productie huis</p>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
